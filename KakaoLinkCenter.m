@@ -4,15 +4,36 @@
 // @version 2.0
 //
 #import "KakaoLinkCenter.h"
-#import "JSONKit.h"
+
+@interface NSDictionary (JSONString)
+
+-(NSString *)JSONString;
+
+@end
+
+@implementation NSDictionary (JSONString)
+
+-(NSString *)JSONString {
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self options:0 error:&error];
+    if (error) {
+        NSLog(@"JSONString error: %@",error.localizedDescription);
+        return @"{}";
+    } else {
+        NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        return jsonString;
+    }
+}
+
+@end
 
 static NSString *StringByAddingPercentEscapesForURLArgument(NSString *string) {
-	NSString *escapedString = (NSString *)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
+	NSString *escapedString = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
 																				  (CFStringRef)string,
 																				  NULL,
 																				  (CFStringRef)@"!*'();:@&=+$,/?%#[]",
-																				  kCFStringEncodingUTF8);
-	return [escapedString autorelease];
+																				  kCFStringEncodingUTF8));
+	return escapedString;
 }
 
 static NSString *HTTPArgumentsStringForParameters(NSDictionary *parameters) {
