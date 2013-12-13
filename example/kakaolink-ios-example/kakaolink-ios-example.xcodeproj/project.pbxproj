@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E6B103A1547CD1700253D1B /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6B10391547CD1700253D1B /* JSONKit.m */; };
+		73ABE11A185AF3CB00DF7249 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 73ABE119185AF3CB00DF7249 /* Default-568h@2x.png */; };
 		8EEA669D1547C65B0048DD0F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEA669C1547C65B0048DD0F /* UIKit.framework */; };
 		8EEA669F1547C65B0048DD0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEA669E1547C65B0048DD0F /* Foundation.framework */; };
 		8EEA66A11547C65B0048DD0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEA66A01547C65B0048DD0F /* CoreGraphics.framework */; };
@@ -20,8 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8E6B10381547CD1700253D1B /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONKit.h; path = external/JSONKit/JSONKit.h; sourceTree = "<group>"; };
-		8E6B10391547CD1700253D1B /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = external/JSONKit/JSONKit.m; sourceTree = "<group>"; };
+		73ABE119185AF3CB00DF7249 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		8EEA66981547C65B0048DD0F /* kakaolink-ios-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kakaolink-ios-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EEA669C1547C65B0048DD0F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8EEA669E1547C65B0048DD0F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -53,21 +52,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8E6B10371547CD0600253D1B /* JSONKit */ = {
-			isa = PBXGroup;
-			children = (
-				8E6B10381547CD1700253D1B /* JSONKit.h */,
-				8E6B10391547CD1700253D1B /* JSONKit.m */,
-			);
-			name = JSONKit;
-			sourceTree = "<group>";
-		};
 		8EEA668D1547C65B0048DD0F = {
 			isa = PBXGroup;
 			children = (
+				73ABE119185AF3CB00DF7249 /* Default-568h@2x.png */,
 				8EEA66A21547C65B0048DD0F /* kakaolink-ios-example */,
 				8EEA66B91547C6A40048DD0F /* Kakaolink */,
-				8EEA66C21547C7490048DD0F /* External Libraries */,
 				8EEA669B1547C65B0048DD0F /* Frameworks */,
 				8EEA66991547C65B0048DD0F /* Products */,
 			);
@@ -124,14 +114,6 @@
 			name = Kakaolink;
 			sourceTree = "<group>";
 		};
-		8EEA66C21547C7490048DD0F /* External Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				8E6B10371547CD0600253D1B /* JSONKit */,
-			);
-			name = "External Libraries";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -185,6 +167,7 @@
 			files = (
 				8EEA66A71547C65B0048DD0F /* InfoPlist.strings in Resources */,
 				8EEA66B31547C65B0048DD0F /* ViewController.xib in Resources */,
+				73ABE11A185AF3CB00DF7249 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,7 +182,6 @@
 				8EEA66AD1547C65B0048DD0F /* AppDelegate.m in Sources */,
 				8EEA66B01547C65B0048DD0F /* ViewController.m in Sources */,
 				8EEA66C01547C7100048DD0F /* KakaoLinkCenter.m in Sources */,
-				8E6B103A1547CD1700253D1B /* JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,10 +261,7 @@
 		8EEA66B71547C65B0048DD0F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/external/yajl-objc/Example/TestAppIOS/Frameworks\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "kakaolink-ios-example/kakaolink-ios-example-Prefix.pch";
 				INFOPLIST_FILE = "kakaolink-ios-example/kakaolink-ios-example-Info.plist";
@@ -295,10 +274,7 @@
 		8EEA66B81547C65B0048DD0F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/external/yajl-objc/Example/TestAppIOS/Frameworks\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "kakaolink-ios-example/kakaolink-ios-example-Prefix.pch";
 				INFOPLIST_FILE = "kakaolink-ios-example/kakaolink-ios-example-Info.plist";
